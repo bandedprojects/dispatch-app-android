@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+       
+				<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+		<link rel="stylesheet" href="css/custom.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/barcode.js"></script>
+		<script src="js/jquery.mobile-1.4.5.js"></script>
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.62/pdfmake.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+	
+        <title>Hello World</title>
+    </head>
+<body>
+
+
+
+		<div data-role="page" id="choose_batch">
+
+			<div data-role="header" id="maincolor">
+				<h4>Choose Batch</h4>
+			</div><!-- /header -->
+
+			<div role="main" class="ui-content">
+				<input type="file" id="myFile" multiple>
+				
+
+			</div><!-- /content -->
+			
+			<div id="bottom_button_next" data-role="footer" data-position="fixed">
+				<h4><a id="link_custom" href="#barcode" data-transition="slide" >Next</a></h4>
+			</div><!-- /footer -->
+			
+			
+		</div><!-- /page -->
+
+		<!-- Start of second page -->
+
+		<div data-role="page" id="barcode">
+
+			<div data-role="header" id="maincolor">
+				<h4>Scan BarCode</h4>
+			</div><!-- /header -->
+
+			<div role="main" class="ui-content">
+				<div class="container">
+					<img id= "status_icon_success" src="images/success.gif" alt="Avatar"  width="70" height="70"><p id="status_text_success">465468654865</p></img>
+					<img id= "status_icon_error" src="images/error.gif" alt="Avatar"  width="70" height="70"><p id="status_text_error">465468654865</p></img>
+					
+				</div>	
+				<button id="download_btn" onclick="download()">Download</button>
+				<div id="table-wrapper">
+					<div id="table-scroll">
+						<table id="Dispatch_table">
+							
+							
+							<tr>
+							<td>No</td>
+							<td>Serial No</td>
+							<td>Tare Weight(kg)</td>
+							<td>Tare Weight kg</td>
+							<td>Month of Mfg</td>
+							<td>Year of Mfg</td>
+							<td>Batch No</td>
+							</tr>
+							
+						</table>
+					</div>
+				</div>  
+
+
+
+			</div><!-- /content -->
+			<div id="bottom_button_next" data-role="footer" data-position="fixed">
+				<h4><a id="link_custom" href="#choose_batch" data-transition="slide" data-direction="reverse">Back</a></h4>
+			</div><!-- /footer -->
+			
+			
+			
+		</div><!-- /page -->
+
+
+
+
+
+
+		<script>
+			
+		</script>
+	</body>
+
+</html>

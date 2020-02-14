@@ -1,0 +1,110 @@
+#bottom_button_next {
+	background-color: #608692;
+	color:white;
+}
+
+
+#link_custom,#link_download {
+	text-decoration: none;
+	color: white;
+}
+
+#download_btn{
+	background-color: #005599;
+    color: white;
+	font-size: 15px;
+}
+
+#maincolor h4, 
+#maincolor a {
+  color: #608692
+}
+
+#status_icon_success, #status_icon_error{
+	margin-top: 5px;
+	max-width: 70px;
+	max-height: 70px;
+	display:none;
+	float: left;
+}
+  
+.ui-content{
+	padding:5px;
+}
+  
+  .container {
+	
+	text-align: center;
+	background-color: white;
+	min-height: 80px;
+  }
+  #status_text_success{
+	
+	width:78%;
+	min-height: 100%;
+	
+	
+	text-align: center;
+	padding-top: 30px;
+	font-size: 18px;
+	font-weight: bold;
+	display:none;
+  }
+
+  #status_text_error{
+	
+	width:78%;
+	min-height: 100%;
+	
+	
+	text-align: center;
+	padding-top: 30px;
+	font-size: 13px;
+	font-weight: bold;
+	display:none;
+	color:red;
+  }
+
+  #black{
+	  color:black;
+  }
+
+  table, td, th {
+	border: 1px solid black;
+  }
+  
+  table {
+	border-collapse: collapse;
+	width: 100%;
+  }
+  
+  th ,tr{
+	height: 25px;
+  }
+
+  #table-wrapper {
+	position:relative;
+  }
+  #table-scroll {
+	height:100%;
+	overflow:auto;  
+	margin-top:20px;
+	
+
+  }
+  #table-wrapper table {
+	width:100%;
+  
+  }
+  #table-wrapper table * {
+	
+	color:black;
+  }
+  #table-wrapper table thead th .text {
+	position:absolute;   
+	top:-20px;
+	z-index:2;
+	height:20px;
+	width:35%;
+	border:1px solid;
+  }
